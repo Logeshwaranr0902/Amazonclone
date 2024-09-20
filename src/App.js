@@ -9,6 +9,7 @@ import {
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from "./pages/Home";
+import Cart from "./pages/Cart";
 import { productsData } from './api/api';
 import Signin from './pages/Signin';
 
@@ -25,8 +26,8 @@ function App() {
   const router = createBrowserRouter(createRoutesFromElements(
 
     <Route path="/" element={<Layout />}>
-      <Route path='/home' element={<Home />} loader={productsData}></Route>
-      <Route path='/signin' element={<Signin />}> </Route>
+      <Route index element={<Home />} loader={productsData}></Route>
+      <Route path="/cart" element={<Cart />}></Route>
     </Route>
 
 
